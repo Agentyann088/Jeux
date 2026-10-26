@@ -1,0 +1,9 @@
+Les Aventures de Sam - version Railway
+
+Contenu :
+  Dockerfile   -> Railway le detecte et construit un petit serveur web (Caddy)
+  Caddyfile    -> reglages du serveur
+  site/        -> le jeu (accueil + volume 1 + volume 2)
+
+Plus tard, pour Google Play : mettre le fichier assetlinks.json donne par
+PWABuilder dans site/.well-known/assetlinks.json puis redeployer.
