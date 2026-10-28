@@ -1,0 +1,6 @@
+Les Aventures de Sam - version Railway avec code d'acces
+
+Pour activer le code : Railway > service > Variables
+  CODE         = le code secret (obligatoire pour activer la protection)
+  IDENTIFIANT  = le nom a taper (facultatif, "famille" par defaut)
+Pour enlever la protection : supprimer la variable CODE.

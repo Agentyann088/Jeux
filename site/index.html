@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#7b3fd1">
+<title>Les Aventures de Sam</title>
+<link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap">
+<style>
+:root{--ink:#2b1838;--violet:#7b3fd1;--pumpkin:#ff7a1a;--paper:#fff6ec;--font:"Baloo 2","Trebuchet MS","Arial Rounded MT Bold",sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:var(--font);color:var(--ink);background:linear-gradient(160deg,#7b3fd1 0%,#c94f9a 55%,#ff7a1a 100%) fixed;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;
+  padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+h1{margin:0 0 4px;color:#fff;font-size:clamp(30px,7vw,52px);line-height:1;text-align:center;text-shadow:0 4px 0 rgba(43,24,56,.35)}
+p.sub{margin:0 0 18px;color:#fff3d6;font-weight:700;font-size:clamp(15px,3.6vw,19px);text-align:center}
+.vols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;width:100%;max-width:820px}
+a.vol{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:4px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 6px 0 var(--ink)}
+a.vol:active{transform:translateY(4px);box-shadow:0 2px 0 var(--ink)}
+a.vol img{display:block;width:100%;aspect-ratio:720/400;object-fit:cover;border-bottom:4px solid var(--ink)}
+.vt{padding:8px 14px 12px}
+.tag{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.vol.v2 .tag{color:var(--pumpkin)}
+.vn{font-size:22px;font-weight:800;line-height:1.1}
+.vd{font-size:14px;font-weight:500;color:#6e5a7e;line-height:1.25;margin-top:2px}
+@media (orientation:landscape) and (max-height:500px){
+  body{justify-content:flex-start}
+  h1{font-size:30px} p.sub{margin-bottom:10px}
+  .vols{grid-template-columns:1fr 1fr;max-width:760px}
+  a.vol img{aspect-ratio:720/300}
+  .vd{display:none}
+}
+</style>
+</head>
+<body>
+<h1>Les Aventures de Sam</h1>
+<p class="sub">Le chaton super-héros et ses amis</p>
+<div class="vols">
+  <a class="vol v1" href="vol1.html">
+    <img src="img/v1.jpg" alt="Sam et Lumi la licorne devant un arc-en-ciel">
+    <div class="vt"><div class="tag">Volume 1</div><div class="vn">Sam et la Licorne Disparue</div>
+    <div class="vd">Retrouve Lumi en ramassant les crottes arc-en-ciel. 11 niveaux.</div></div>
+  </a>
+  <a class="vol v2" href="vol2.html">
+    <img src="img/v2.jpg" alt="Sam et Stella face au Comte Ronchonula sous la lune">
+    <div class="vt"><div class="tag">Volume 2 · Halloween</div><div class="vn">Sam et la Nuit des Citrouilles</div>
+    <div class="vd">Sauve Stella du Comte Ronchonula. 11 niveaux et un mode 2 joueurs.</div></div>
+  </a>
+</div>
+<script>
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
