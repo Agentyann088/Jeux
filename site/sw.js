@@ -1,4 +1,4 @@
-const CACHE='sam-v1-2026-10-22';
+const CACHE='sam-v2-2026-10-29';
 const FILES=["./", "index.html", "vol1.html", "vol2.html", "manifest.webmanifest", "img/apple-touch-icon.png", "img/icon-192.png", "img/icon-512.png", "img/maskable-192.png", "img/maskable-512.png", "img/v1.jpg", "img/v2.jpg"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
